@@ -1,0 +1,91 @@
+@use "../base/variables";
+
+.hero{
+
+    min-height:85vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px 80px;
+
+     background:
+        radial-gradient(
+            circle at center,
+            rgba(213,110,0,.12) 0%,
+            rgba(213,110,0,.05) 30%,
+            #151515 70%,
+            #0f0f0f 100%
+        );
+
+}
+
+/* ======================= */
+
+.hero-logo{
+
+    width:300px;
+
+    margin-bottom:35px;
+
+    filter:
+    drop-shadow(0 0 15px rgba(255,140,0,.25))
+    drop-shadow(0 15px 40px rgba(0,0,0,.45));
+
+    transition:.4s;
+
+}
+
+.hero-logo:hover{
+
+    transform:scale(1.04);
+
+}
+
+/* ======================= */
+
+.hero-tag{
+
+    color:variables.$gold;
+
+    font-size:1.15rem;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+
+}
+
+/* ======================= */
+
+.hero-description{
+
+    max-width:720px;
+
+    color:variables.$text;
+
+    font-size:1.35rem;
+
+    line-height:1.7;
+
+    margin-bottom:45px;
+
+}
+
+/* ======================= */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}

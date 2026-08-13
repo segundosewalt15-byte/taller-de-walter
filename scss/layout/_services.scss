@@ -1,0 +1,102 @@
+@use "../base/variables";
+
+.services {
+    background-color: variables.$surface;
+    padding: 100px 50px;
+    text-align: center;
+
+    h2 {
+        font-size: 2.5rem;
+        color: variables.$red;
+        margin-bottom: 50px;
+    }
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* ===========================
+   CARD GENERAL
+=========================== */
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 320px;
+    padding: 40px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    text-align: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 1px solid variables.$gold;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .35);
+
+    transition: .35s;
+}
+
+/* Capa oscura */
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .60);
+    transition: .35s;
+}
+
+/* Texto arriba de la imagen */
+
+.service-card h3,
+.service-card p {
+    position: relative;
+    z-index: 2;
+}
+
+.service-card h3 {
+    color: variables.$gold;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: variables.$text;
+    line-height: 1.6;
+}
+
+/* Hover */
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card:hover::before {
+    background: rgba(0, 0, 0, .35);
+}
+
+/* ===========================
+   FONDOS
+=========================== */
+
+.service-tech {
+    background-image: url("../assets/img/card-clean.png");
+}
+
+.service-build {
+    background-image: url("../assets/img/card-build.png");
+}
+
+.service-store {
+    background-image: url("../assets/img/card-hardware.png");
+}

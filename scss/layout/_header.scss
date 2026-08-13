@@ -1,0 +1,73 @@
+@use "../base/variables";
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1px 0;
+
+    background-color: #0f0f0ff2;
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #d56e0033;
+
+    box-shadow: 0 5px 20px #0000004d;
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:28px 0;
+}
+
+.logo img{
+    height: 110px;
+    width: auto;
+    transition: .3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+nav ul{
+    display:flex;
+    gap:60px;
+}
+
+nav a {
+    position: relative;
+    color: variables.$text;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color .3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: variables.$gold;
+
+    transform: translateX(-50%);
+    transition: width .3s ease;
+}
+
+nav a:hover {
+    color: variables.$gold;
+}
+
+nav a:hover::after {
+    width: 100%;
+}

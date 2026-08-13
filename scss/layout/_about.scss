@@ -1,0 +1,21 @@
+@use "../base/variables";
+
+.about {
+    background-color: variables.$background;
+    padding: 100px 50px;
+    text-align: center;
+
+    h2 {
+        font-size: 2.5rem;
+        color: variables.$gold;
+        margin-bottom: 30px;
+    }
+
+    p {
+        max-width: 800px;
+        margin: 0 auto;
+        color: variables.$text;
+        line-height: 1.8;
+        font-size: 1.1rem;
+    }
+}

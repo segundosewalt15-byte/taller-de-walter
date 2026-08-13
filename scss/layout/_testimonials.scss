@@ -1,0 +1,50 @@
+@use "../base/variables";
+@use "../base/variables" as *;
+
+// ==========================
+// TESTIMONIOS
+// ==========================
+
+.testimonials {
+    padding: 5rem 10%;
+    background-color: $surface;
+
+    h2 {
+        text-align: center;
+        color: $gold;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: $background;
+    border: 1px solid $gold;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: .3s;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0,0,0,.4);
+    }
+
+    p {
+        color: $text-secondary;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+        font-style: italic;
+    }
+
+    h4 {
+        color: $gold;
+        font-weight: 600;
+    }
+}
