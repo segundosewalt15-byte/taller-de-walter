@@ -1,9 +1,8 @@
-@use "../base/variables";
 @use "../base/variables" as *;
 
-// ==========================
-// TESTIMONIOS
-// ==========================
+/* ===========================
+   TESTIMONIALS
+=========================== */
 
 .testimonials {
     padding: 5rem 10%;
@@ -33,7 +32,7 @@
 
     &:hover {
         transform: translateY(-8px);
-        box-shadow: 0 10px 25px rgba(0,0,0,.4);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
     }
 
     p {
@@ -47,4 +46,37 @@
         color: $gold;
         font-weight: 600;
     }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+
+    .testimonials {
+        padding: 80px 30px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .testimonials {
+        padding: 70px 20px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
 }

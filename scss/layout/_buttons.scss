@@ -1,4 +1,17 @@
 @use "../base/variables";
+
+/* ===========================
+   HERO BUTTONS
+=========================== */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .hero-buttons a {
     text-decoration: none;
     color: variables.$beige;
@@ -8,6 +21,7 @@
     border-radius: 8px;
     transition: .3s;
     font-weight: 600;
+    display: inline-block;
 }
 
 .hero-buttons a:hover {
@@ -15,4 +29,25 @@
     color: black;
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(196, 138, 43, .35);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 600px) {
+
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
 }

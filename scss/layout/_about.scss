@@ -1,5 +1,9 @@
 @use "../base/variables";
 
+/* ===========================
+   ABOUT
+=========================== */
+
 .about {
     background-color: variables.$background;
     padding: 100px 50px;
@@ -18,4 +22,42 @@
         line-height: 1.8;
         font-size: 1.1rem;
     }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+
+    .about {
+        padding: 80px 30px;
+
+        h2 {
+            font-size: 2.2rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+        }
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .about {
+        padding: 70px 20px;
+
+        h2 {
+            font-size: 1.9rem;
+            line-height: 1.3;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    }
+
 }
