@@ -1,0 +1,501 @@
+@use "../base/variables";
+
+/* ===========================
+   SERVICES HERO
+=========================== */
+
+.services-hero {
+
+    min-height: 65vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 120px 20px 80px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(213, 110, 0, .12) 0%,
+            rgba(213, 110, 0, .05) 30%,
+            #151515 70%,
+            #0f0f0f 100%
+        );
+
+}
+
+.services-logo {
+
+    width: 300px;
+
+    margin-bottom: 30px;
+
+    filter:
+        drop-shadow(0 0 15px rgba(255, 140, 0, .25))
+        drop-shadow(0 15px 40px rgba(0, 0, 0, .45));
+
+    transition: .4s;
+
+}
+
+.services-logo:hover {
+
+    transform: scale(1.04);
+
+}
+
+.services-tag {
+
+    color: variables.$gold;
+
+    font-size: 1rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+}
+
+.services-hero h1 {
+
+    color: variables.$red;
+
+    font-size: 3.5rem;
+
+    margin-bottom: 20px;
+
+}
+
+.services-hero p {
+
+    max-width: 700px;
+
+    color: variables.$text;
+
+    font-size: 1.25rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* ===========================
+   SERVICES
+=========================== */
+
+.services-page {
+
+    padding: 100px 10%;
+
+    background-color: variables.$surface;
+
+    text-align: center;
+
+}
+
+.services-page h2 {
+
+    color: variables.$gold;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 50px;
+
+}
+
+.services-page-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+}
+
+.service-page-card {
+
+    min-height: 250px;
+
+    padding: 35px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: variables.$background;
+
+    border: 1px solid variables.$gold;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.service-page-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
+
+}
+
+.service-icon {
+
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
+
+}
+
+.service-page-card h3 {
+
+    color: variables.$text;
+
+    font-size: 1.4rem;
+
+    margin-bottom: 15px;
+
+}
+
+.service-page-card p {
+
+    color: variables.$text-secondary;
+
+    line-height: 1.6;
+
+}
+
+
+/* ===========================
+   PROCESS
+=========================== */
+
+.service-process {
+
+    padding: 100px 10%;
+
+    background-color: variables.$background;
+
+    text-align: center;
+
+}
+
+.service-process > span {
+
+    color: variables.$gold;
+
+    font-size: .85rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+.service-process h2 {
+
+    color: variables.$red;
+
+    font-size: 2.5rem;
+
+    margin: 15px 0 50px;
+
+}
+
+.process-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+}
+
+.process-grid article {
+
+    padding: 35px 30px;
+
+    background-color: variables.$surface;
+
+    border-radius: 15px;
+
+    border: 1px solid rgba(213, 110, 0, .5);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.process-grid article:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
+
+}
+
+.process-number {
+
+    display: block;
+
+    color: variables.$gold;
+
+    font-size: 2rem;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+.process-grid h3 {
+
+    color: variables.$text;
+
+    font-size: 1.3rem;
+
+    margin-bottom: 15px;
+
+}
+
+.process-grid p {
+
+    color: variables.$text-secondary;
+
+    line-height: 1.6;
+
+}
+
+
+/* ===========================
+   SERVICES CTA
+=========================== */
+
+.services-cta {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(213, 110, 0, .12),
+            #0f0f0f 65%
+        );
+
+}
+
+.services-cta h2 {
+
+    color: variables.$gold;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
+
+}
+
+.services-cta p {
+
+    color: variables.$text-secondary;
+
+    font-size: 1.15rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+
+    .services-hero {
+
+        min-height: 60vh;
+
+        padding: 90px 30px 70px;
+
+    }
+
+    .services-logo {
+
+        width: 210px;
+
+        max-width: 80%;
+
+    }
+
+    .services-hero h1 {
+
+        font-size: 3rem;
+
+    }
+
+    .services-hero p {
+
+        font-size: 1.1rem;
+
+    }
+
+    .services-page {
+
+        padding: 80px 30px;
+
+    }
+
+    .services-page-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+
+    }
+
+    .process-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+
+    }
+
+    .process-grid article:last-child {
+
+        grid-column: 1 / -1;
+
+        max-width: 500px;
+
+        width: 100%;
+
+        justify-self: center;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .services-hero {
+
+        min-height: 55vh;
+
+        padding: 80px 20px 60px;
+
+    }
+
+    .services-logo {
+
+        width: 180px;
+
+    }
+
+    .services-tag {
+
+        font-size: .8rem;
+
+        letter-spacing: 2px;
+
+    }
+
+    .services-hero h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+    .services-hero p {
+
+        font-size: 1rem;
+
+    }
+
+    .services-page {
+
+        padding: 70px 20px;
+
+    }
+
+    .services-page h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .services-page-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .process-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .process-grid article:last-child {
+
+        grid-column: auto;
+
+        max-width: none;
+
+    }
+
+    .service-process {
+
+        padding: 70px 20px;
+
+    }
+
+    .service-process h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .services-cta {
+
+        padding: 70px 20px;
+
+    }
+
+    .services-cta h2 {
+
+        font-size: 2rem;
+
+    }
+
+}

@@ -1,0 +1,162 @@
+@use "../base/variables";
+
+/* ===========================
+   SHOP HERO
+=========================== */
+
+.shop-hero {
+
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 120px 20px 80px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(213, 110, 0, .12) 0%,
+            rgba(213, 110, 0, .05) 30%,
+            #151515 70%,
+            #0f0f0f 100%
+        );
+
+}
+
+.shop-logo {
+
+    width: 300px;
+
+    margin-bottom: 30px;
+
+    filter:
+        drop-shadow(0 0 15px rgba(255, 140, 0, .25))
+        drop-shadow(0 15px 40px rgba(0, 0, 0, .45));
+
+    transition: .4s;
+
+}
+
+.shop-logo:hover {
+
+    transform: scale(1.04);
+
+}
+
+.shop-tag {
+
+    color: variables.$gold;
+
+    font-size: 1rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+}
+
+.shop-hero h1 {
+
+    color: variables.$red;
+
+    font-size: 3.5rem;
+
+    margin-bottom: 20px;
+
+}
+
+.shop-hero p {
+
+    max-width: 720px;
+
+    color: variables.$text;
+
+    font-size: 1.25rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+
+    .shop-hero {
+
+        min-height: 60vh;
+
+        padding: 90px 30px 70px;
+
+    }
+
+    .shop-logo {
+
+        width: 230px;
+
+        max-width: 80%;
+
+    }
+
+    .shop-hero h1 {
+
+        font-size: 3rem;
+
+    }
+
+    .shop-hero p {
+
+        font-size: 1.1rem;
+
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .shop-hero {
+
+        min-height: 55vh;
+
+        padding: 80px 20px 60px;
+
+    }
+
+    .shop-logo {
+
+        width: 190px;
+
+    }
+
+    .shop-tag {
+
+        font-size: .8rem;
+
+        letter-spacing: 2px;
+
+    }
+
+    .shop-hero h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+    .shop-hero p {
+
+        font-size: 1rem;
+
+        line-height: 1.6;
+
+    }
+
+}
